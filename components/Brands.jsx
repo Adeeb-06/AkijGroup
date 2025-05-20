@@ -72,7 +72,6 @@ const Brands = () => {
                 end: "+=100%",
                 scrub: true,
                 pin: true,
-                markers: true,
             },
         });
 

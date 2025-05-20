@@ -28,18 +28,7 @@ const Cta = () => {
         // Register ScrollTrigger plugin
         gsap.registerPlugin(ScrollTrigger)
         
-        // Rotate effect for mouse movement
-        window.addEventListener("mousemove", (e) => {
-            let mouseX = e.clientX
-            let mouseY = e.clientY
-
-            let deltaX = mouseX - window.innerWidth / 2
-            let deltaY = mouseY - window.innerHeight / 2
-
-            var angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI)
-
-            setRotate(angle - 180)
-        })
+      
         
         // Initial setup for text elements - hide them below
         gsap.set(textRefs.current, { 
@@ -53,7 +42,6 @@ const Cta = () => {
                 trigger: containerRef.current,
                 start: "top 80%",
                 end: "bottom 20%",
-                toggleActions: "play none none reverse"
             }
         })
         
@@ -80,8 +68,7 @@ const Cta = () => {
     return (
         <div 
             ref={containerRef}
-            data-scroll 
-            data-scroll-section  
+            data-scroll data-scroll-section
             className="w-full h-screen relative bg-[#E0D8B0] flex justify-center items-center px-14 flex-col"
         >
             <div className="textstructure px-14 text-center flex justify-center items-center flex-col">

@@ -2,6 +2,14 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import localFont from 'next/font/local';
+
+
+
+const grodita = localFont({
+  src: '../app/fonts/Gordita-Regular.otf',
+  display: 'swap',
+});
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -92,7 +100,7 @@ const Nav = () => {
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
-      className={`w-full px-6 py-6 flex items-center justify-between fixed top-0 left-0 z-50 transition-all duration-500 `}
+      className={`w-full pr-16 py-6 flex items-center justify-between fixed top-0 left-0 z-50 transition-all duration-500 `}
     >
       {/* Logo with animation */}
       <motion.div
@@ -105,7 +113,7 @@ const Nav = () => {
       {/* Nav Links */}
       <nav>
         <motion.ul
-          className="flex items-center justify-between w-full space-x-10 text-lg font-medium text-[#1a120b] font-mono"
+          className={`flex items-center justify-between w-full space-x-12 text-lg font-medium text-[#1a120b] font-mono ${grodita.className} `}
           variants={navListVariants}
         >
           {navItems.map((item, index) => (

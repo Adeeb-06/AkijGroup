@@ -33,52 +33,26 @@ const About = () => {
     const reveal = gsap.to(lettersRef.current, {
       scrollTrigger: {
         trigger: triggerRef.current,
-        scrub: 1,
+        scrub: 2,
         start: "top center",
         end: "bottom 80%"
       },
       color: "#000",
-      stagger: 1,
-      duration: 10,
+      stagger: 2,
+      duration: 16,
       markers: true,
     })
-    // const imgReveal = tl.to(imgRef.current, {
-    //   height: "70vh",
-    //   duration: 2,
-    //   delay: 6,
-    //   transition: "linear",
-    //   scrollTrigger: {
-    //     trigger: imgTriggerRef.current,
-    //     scrub: 2,
-    //     start: "top center",
-    //     end: "bottom 100%"
-    //   }
-    // })
-    // tl.to(imgTextRef.current, {
-    //   // opacity:"1",
-    //   width:"0%",
-    //   duration: 2,
-    //   transition: "linear",
-    //   scrollTrigger: {
-    //     trigger: imgTriggerRef.current,
-    //     scrub: 2,
-    //     start: "top center",
-    //     end: "bottom 100%"
-    //   }
-
-    // })
-
-
+  
     return () => {
       reveal.kill()
-      // imgReveal.kill()
+   
     }
   }, [])
 
   const text = "Founded in 1940, Akij Group is one of Bangladesh's leading industrial conglomerates. Starting from a small jute business, it has expanded into textiles, cement, ceramics, food, beverages, electronics, and more. With over 70,000 employees, Akij is known for its commitment to quality, innovation, and ethical values. Beyond business, the group actively supports education, healthcare, and community development—driving progress for both industry and society."
 
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.2" className="w-screen   bg-[#f4d0a4] p-14 rounded-tl-3xl rounded-tr-3xl">
+    <div data-scroll data-scroll-section data-scroll-speed="-.2" className="w-screen   bg-[#E0D8B0] p-14 rounded-tl-3xl rounded-tr-3xl">
       <div className={`${grodita.className}   relative w-full mt-8 pt-3`}>
         <div ref={triggerRef} className='  '>
 

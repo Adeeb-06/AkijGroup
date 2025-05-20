@@ -2,6 +2,12 @@
 import React from 'react'
 
 import {motion} from 'framer-motion'
+import localFont from 'next/font/local';
+
+const groditaBold = localFont({
+  src: '../app/fonts/Gordita-Bold.otf',
+  display: 'swap',
+});
 
 
 
@@ -15,12 +21,12 @@ const Since = () => {
            initial={{x:0}} 
            animate={{x:"-100%"}} 
            transition={{ease:"linear" , repeat:Infinity , duration:10}} 
-           className={`  font-semibold uppercase pt-10 -mt-[2vw] -mb-[2vw] text-[#f7f3ee]   text-[24vw] leading-none pr-10 `}> Since 1950</motion.h1>
+           className={` ${groditaBold.className} font-semibold uppercase pt-10 -mt-[2vw] mb-[2vw] text-[#f7f3ee]   text-[24vw] leading-none pr-10 `}> Since 1950</motion.h1>
            <motion.h1 
            initial={{x:0}} 
            animate={{x:"-100%"}} 
            transition={{ease:"linear" , repeat:Infinity , duration:10}} 
-           className={`  font-semibold uppercase pt-10 text-[#f7f3ee]   -mt-[2vw] -mb-[2vw] text-[24vw] leading-none pr-10 `}> since 1950</motion.h1>
+           className={` ${groditaBold.className}  font-semibold uppercase pt-10 text-[#f7f3ee]   -mt-[2vw] mb-[2vw] text-[24vw] leading-none pr-10 `}> since 1950</motion.h1>
         </div>
     </div>
     </>

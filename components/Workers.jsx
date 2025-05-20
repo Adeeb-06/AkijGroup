@@ -27,7 +27,7 @@ const Workers = () => {
   const imgTextRef = useRef(null)
   const imgTriggerRef = useRef(null)
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.06" className='w-full rounded-tl-3xl rounded-tr-3xl  bg-white p'>
+    <div data-scroll data-scroll-section data-scroll-speed="-.06" className='w-full rounded-tl-3xl rounded-tr-3xl  bg-[#FCFFE7] p'>
       <div ref={imgTriggerRef} className='w-full p-14 flex flex-col mb-32 gap-10'>
         <div ref={imgRef} className="akij w-full relative h-[70vh]">
           <div className="img">

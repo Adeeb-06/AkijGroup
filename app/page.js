@@ -1,5 +1,5 @@
 "use client"
-import Features from "@/components/Features";
+import Features from "@/components/Employes";
 import Hero from "@/components/Hero";
 import Quote from "@/components/Quote";
 import Since from "@/components/Since";
@@ -11,6 +11,9 @@ import Workers from "@/components/Workers";
 import LocomotiveScroll from 'locomotive-scroll';
 import { useEffect } from "react";
 import Brands from "@/components/Brands";
+import Employes from "@/components/Employes";
+import Units from "@/components/Units";
+import Achievements from "@/components/Achievements";
 
 
 
@@ -33,12 +36,13 @@ export default function Home() {
         <div className="since">
           <Since/>
         </div>
-        <div className="about">
+        <div className="about mb-20">
           <About/>
         </div>
         <Workers/>
         <div className="fet">
-          <Features/>
+          <Employes/>
+
         </div>
         <div className="brands">
           <Brands/>

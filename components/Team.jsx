@@ -4,8 +4,8 @@ import localFont from 'next/font/local';
 import React, { useRef } from 'react'
 import Image from 'next/image';
 
-const rok = localFont({
-  src: '../app/fonts/rok.otf',
+const huBlackout = localFont({
+  src: '../app/fonts/HUBlackout-Regular.ttf',
   display: 'swap',
 });
 const spaceGrotesk = localFont({
@@ -17,10 +17,7 @@ const lexend = Lexend({
   weight: '700',
 });
 
-const grodita = localFont({
-  src: '../app/fonts/Gordita-Regular.otf',
-  display: 'swap',
-});
+
 
 const Team = () => {
   const imgRef = useRef(null)
@@ -55,7 +52,7 @@ const Team = () => {
                 <div className="absolute   inset-0 bg-black/50 z-10" />
                 {/* <Image fill alt='asl' className='object-cover  absolute' src={'/bashir.png'} /> */}
               </div>
-              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] uppercase leading-none ${rok.className}`}>
+              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] font-semibold uppercase leading-none ${huBlackout.className}`}>
                 Bashir Uddin
               </div>
               <div className={` font-light  bottom-0 z-20 w-full text-yellow-400 text-[1.2vw] uppercase leading-none ${lexend.className}`}>
@@ -67,7 +64,7 @@ const Team = () => {
                 <div className="absolute   inset-0 bg-black/50 z-10" />
                 {/* <Image fill alt='asl' className='object-cover  absolute' src={'/bashir.png'} /> */}
               </div>
-              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] uppercase leading-none ${rok.className}`}>
+              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] font-semibold uppercase leading-none ${huBlackout.className}`}>
                 Bashir Uddin
               </div>
               <div className={` font-light  bottom-0 z-20 w-full text-yellow-400 text-[1.2vw] uppercase leading-none ${lexend.className}`}>
@@ -79,7 +76,7 @@ const Team = () => {
                 <div className="absolute   inset-0 bg-black/50 z-10" />
                 {/* <Image fill alt='asl' className='object-cover  absolute' src={'/bashir.png'} /> */}
               </div>
-              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] uppercase leading-none ${rok.className}`}>
+              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] uppercase font-semibold leading-none ${huBlackout.className}`}>
                 Bashir Uddin
               </div>
               <div className={` font-light  bottom-0 z-20 w-full text-yellow-400 text-[1.2vw] uppercase leading-none ${lexend.className}`}>
@@ -97,7 +94,7 @@ const Team = () => {
                 <div className="absolute   inset-0 bg-black/50 z-10" />
                 {/* <Image fill alt='asl' className='object-cover  absolute' src={'/bashir.png'} /> */}
               </div>
-              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] uppercase leading-none ${rok.className}`}>
+              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] font-semibold uppercase leading-none ${huBlackout.className}`}>
                 Bashir Uddin
               </div>
               <div className={` font-light  bottom-0 z-20 w-full text-yellow-400 text-[1.2vw] uppercase leading-none ${lexend.className}`}>
@@ -108,7 +105,7 @@ const Team = () => {
                 <div className="absolute   inset-0 bg-black/50 z-10" />
                 {/* <Image fill alt='asl' className='object-cover  absolute' src={'/bashir.png'} /> */}
               </div>
-              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] uppercase leading-none ${rok.className}`}>
+              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] font-semibold uppercase leading-none ${huBlackout.className}`}>
                 Bashir Uddin
               </div>
               <div className={` font-light  bottom-0 z-20 w-full text-yellow-400 text-[1.2vw] uppercase leading-none ${lexend.className}`}>
@@ -119,7 +116,7 @@ const Team = () => {
                 <div className="absolute   inset-0 bg-black/50 z-10" />
                 {/* <Image fill alt='asl' className='object-cover  absolute' src={'/bashir.png'} /> */}
               </div>
-              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] uppercase leading-none ${rok.className}`}>
+              <div className={`  bottom-0 mt-3 z-20 w-full text-[black] text-[1.5vw] font-semibold uppercase leading-none ${huBlackout.className}`}>
                 Bashir Uddin
               </div>
               <div className={` font-light  bottom-0 z-20 w-full text-yellow-400 text-[1.2vw] uppercase leading-none ${lexend.className}`}>

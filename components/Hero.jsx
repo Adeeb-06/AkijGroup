@@ -40,7 +40,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.3" className='w-full h-screen bg-[#FCFFE7]'>
+    <div id='home' data-scroll data-scroll-section data-scroll-speed="-.3" className='w-full h-screen bg-[#FCFFE7]'>
       <Nav />
 
       {/* Only show content after initial GSAP setup */}

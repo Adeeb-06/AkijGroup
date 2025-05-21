@@ -47,15 +47,15 @@ export default function CounterSections() {
                 switch (index) {
                     case 0:
                         counterElement = employeesCountRef.current;
-                        endValue = 500;
+                        endValue = 35053;
                         break;
                     case 1:
                         counterElement = achievementsCountRef.current;
-                        endValue = 250;
+                        endValue = 25;
                         break;
                     case 2:
                         counterElement = unitsCountRef.current;
-                        endValue = 1000;
+                        endValue = 31;
                         break;
                 }
 
@@ -116,18 +116,19 @@ export default function CounterSections() {
     };
 
     return (
-        <div className="w-full">
+        <div id='more' className="w-full">
             {/* Employees Section */}
             <section
+                
                 ref={addSectionRef}
-                className="h-screen w-full flex justify-center items-center gap-20   bg-[#CE9461] text-white"
+                className="h-screen w-full flex justify-center items-center gap-20   bg-[#F7E6C4] text-white"
             >
                 <div className="textstructure text-center  mt- px-14 ">
 
                     <div className="masker">
 
-                        <div className='w-fit flex flex-col text-[#FCFFE7]  overflow-hidden '>
-                            <h1 ref={employeesCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>31321+</h1>
+                        <div className='w-fit flex flex-col text-[#606C5D]  overflow-hidden '>
+                            <h1 ref={employeesCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>0</h1>
                             <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>Employees</h1>
                         </div>
                     </div>
@@ -138,13 +139,13 @@ export default function CounterSections() {
             {/* Achievements Section */}
             <section
                 ref={addSectionRef}
-                className="h-screen w-full flex flex-col items-center justify-center bg-[#FCFFE7]  text-white"
+                className="h-screen w-full flex flex-col items-center justify-center bg-[#E0D8B0]  text-white"
             >
               <div className="textstructure text-center  mt- px-14 ">
 
                     <div className="masker">
 
-                        <div className='w-fit flex flex-col text-[#CE9461]  overflow-hidden '>
+                        <div className='w-fit flex flex-col text-[#000]  overflow-hidden '>
                             <h1 ref={achievementsCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>25+</h1>
                             <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>Achievements</h1>
                         </div>
@@ -156,13 +157,13 @@ export default function CounterSections() {
             {/* Units Section */}
             <section
                 ref={addSectionRef}
-                className="h-screen w-full flex flex-col items-center justify-center bg-[#CE9461]  text-white"
+                className="h-screen w-full flex flex-col items-center justify-center bg-[#F7E6C4]  text-white"
             >
                <div className="textstructure text-center  mt- px-14 ">
 
                     <div className="masker">
 
-                        <div className='w-fit flex flex-col text-[#FCFFE7]  overflow-hidden '>
+                        <div className='w-fit flex flex-col text-[#606C5D]  overflow-hidden '>
                             <h1 ref={unitsCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>25+</h1>
                             <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>Units</h1>
                         </div>

@@ -115,7 +115,7 @@ const Brands = () => {
                 }
             `}</style>
 
-            <section
+            <section id="brand"
                 ref={sectionRef}
                 className="relative h-screen w-full overflow-hidden bg-black"
             >

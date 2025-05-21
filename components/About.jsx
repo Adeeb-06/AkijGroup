@@ -49,10 +49,10 @@ const About = () => {
     }
   }, [])
 
-  const text = "Founded in 1940, Akij Group is one of Bangladesh's leading industrial conglomerates. Starting from a small jute business, it has expanded into textiles, cement, ceramics, food, beverages, electronics, and more. With over 70,000 employees, Akij is known for its commitment to quality, innovation, and ethical values. Beyond business, the group actively supports education, healthcare, and community development—driving progress for both industry and society."
+  const text = "Founded in 1950, Akij Group is one of Bangladesh's leading industrial conglomerates. Starting from a small jute business, it has expanded into textiles, cement, ceramics, food, beverages, electronics, and more. With over 70,000 employees, Akij is known for its commitment to quality, innovation, and ethical values. Beyond business, the group actively supports education, healthcare, and community development—driving progress for both industry and society."
 
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.2" className="w-screen   bg-[#E0D8B0] p-14 rounded-tl-3xl rounded-tr-3xl">
+    <div id='about' data-scroll data-scroll-section data-scroll-speed="-.2" className="w-screen   bg-[#E0D8B0] p-14 rounded-tl-3xl rounded-tr-3xl">
       <div className={`${grodita.className}   relative w-full mt-8 pt-3`}>
         <div ref={triggerRef} className='  '>
 

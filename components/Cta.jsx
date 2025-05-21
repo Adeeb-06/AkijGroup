@@ -40,8 +40,9 @@ const Cta = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top 80%",
-                end: "bottom 20%",
+                start: "top 0",
+                end: "bottom 80%",
+                scrub:2,
             }
         })
         

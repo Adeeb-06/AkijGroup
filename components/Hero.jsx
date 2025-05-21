@@ -46,15 +46,16 @@ const Hero = () => {
       {/* Only show content after initial GSAP setup */}
       <div className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <div className="up uppercase w-full flex relative items-center h-[45vh] bg--600">
-          <div className={`text-[7vw] absolute ml-[2vw] tracking- font-medium mt-[10vw] w-[96vw] leading-[6.4vw] ${futuraBold.className}`}>
+          <div className={`xl:text-[7vw] text-[15vw] md:text-[12.5vw] absolute ml-[2vw] tracking- font-medium 
+             mt-[26vw] md:mt-[20vw] xl:mt-[7vw] w-[96vw] leading-[14vw] md:leading-[11vw] xl:leading-[6.4vw] ${futuraBold.className}`}>
             <h1 ref={headRef1}>
               Decades of Impact
             </h1>
             <h1 ref={headRef2}>Grounded in True Integrity</h1>
           </div>
         </div>
-        <div className="bott py-8 w-full h-[55vh] flex justify-center items-center bg--600">
-          <div ref={imgRef} className="img py-8 w-[96vw] h-full relative">
+        <div className="bott py8 w-full h-[55vh] flex justify-center items-center bg--600">
+          <div ref={imgRef} className="img py- w-[96vw] h-full relative">
             <Image fill alt="ssdfj" className='object-cover rounded-3xl' src={'/building.jpg'} />
           </div>
         </div>

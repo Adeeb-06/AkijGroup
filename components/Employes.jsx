@@ -123,13 +123,13 @@ export default function CounterSections() {
                 ref={addSectionRef}
                 className="h-screen w-full flex justify-center items-center gap-20   bg-[#F7E6C4] text-white"
             >
-                <div className="textstructure text-center  mt- px-14 ">
+                <div className="textstructure text-center  mt- px- ">
 
                     <div className="masker">
 
                         <div className='w-fit flex flex-col text-[#606C5D]  overflow-hidden '>
-                            <h1 ref={employeesCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>0</h1>
-                            <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>Employees</h1>
+                            <h1 ref={employeesCountRef} className={`  ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[25vw] xl:text-[15vw] xl:leading-[12vw] uppercase leading-[22vw] font-[500] tracking `}>0</h1>
+                            <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[25vw] xl:text-[15vw] xl:leading-[12vw] uppercase leading-[22vw] font-[500] tracking `}>Employees</h1>
                         </div>
                     </div>
 
@@ -146,8 +146,8 @@ export default function CounterSections() {
                     <div className="masker">
 
                         <div className='w-fit flex flex-col text-[#000]  overflow-hidden '>
-                            <h1 ref={achievementsCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>25+</h1>
-                            <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>Achievements</h1>
+                            <h1 ref={achievementsCountRef} className={`  ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[20vw] xl:text-[15vw] xl:leading-[12vw] uppercase leading-[18vw] font-[500] tracking  `}>25+</h1>
+                            <h1 className={`  ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[20vw] xl:text-[15vw] xl:leading-[12vw] uppercase leading-[18vw] font-[500] tracking  `}>Achievements</h1>
                         </div>
                     </div>
 
@@ -164,8 +164,8 @@ export default function CounterSections() {
                     <div className="masker">
 
                         <div className='w-fit flex flex-col text-[#606C5D]  overflow-hidden '>
-                            <h1 ref={unitsCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>25+</h1>
-                            <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[16vw] uppercase leading-[14vw] font-[500] tracking `}>Units</h1>
+                            <h1 ref={unitsCountRef} className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[25vw] xl:text-[15vw] xl:leading-[12vw] uppercase leading-[22vw] font-[500] tracking `}>25+</h1>
+                            <h1 className={` ${founderGrotesk.className} pt-[2vw] -mb-[.9vw] text-[25vw] xl:text-[15vw] xl:leading-[12vw]  leading-[22vw] uppercase font-[500] tracking `}>Units</h1>
                         </div>
                     </div>
 

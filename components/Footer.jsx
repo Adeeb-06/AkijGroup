@@ -8,7 +8,7 @@ const groditaBold = localFont({
 });
 const Footer = () => {
   return (
-    <div className="footer relative flex  flex-col w-full h-[50vh] bg-[#000] ">
+    <div className="footer relative flex  flex-col w-full h-[12vh] md:h-[16vh] lg:h-[50vh] bg-[#000] ">
       <div className={`${groditaBold.className} text-[#FCFFE7] flex items-center justify-center uppercase  lgo text-[15vw]`}>
         Akij group.
       </div>

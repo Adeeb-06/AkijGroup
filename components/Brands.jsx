@@ -125,7 +125,7 @@ const Brands = () => {
                     className="absolute bg-[#E0D8B0] top-0 left-0 w-full h-1/2 overflow-hidden z-20 flex items-end justify-center"
                 >
                     <h1
-                        className={`${founderGrotesk.className} text-[24vw] text-black uppercase leading-none translate-y-[60%]`}
+                        className={`${founderGrotesk.className} text-[30vw] md:text-[24vw] text-black uppercase leading-none translate-y-[60%]`}
                     >
                         Brands
                     </h1>
@@ -137,7 +137,7 @@ const Brands = () => {
                     className="absolute bg-[#E0D8B0] bottom-0 left-0 w-full h-1/2 overflow-hidden z-20 flex items-start justify-center"
                 >
                     <h1
-                        className={`${founderGrotesk.className} text-[24vw] text-black uppercase leading-none translate-y-[-40%]`}
+                        className={`${founderGrotesk.className} text-[30vw] md:text-[24vw] text-black uppercase leading-none translate-y-[-40%]`}
                     >
                         Brands
                     </h1>

@@ -15,7 +15,7 @@ const groditaBold = localFont({
 const Since = () => {
   return (
     <>
-    <div data-scroll data-scroll-section data-scroll-speed=".000999" className='w-full py-20 rounded-tl-3xl rounded-tr-3xl bg-[#1a120b] '>
+    <div data-scroll data-scroll-section data-scroll-speed=".000999" className='w-full py-20 xl:rounded-tl-3xl xl:rounded-tr-3xl bg-[#1a120b] '>
         <div className="text border-b-1 border-t-1 border-zinc-500 flex   whitespace-nowrap overflow-hidden">
            <motion.h1  
            initial={{x:0}} 

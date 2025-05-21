@@ -41,8 +41,7 @@ const Cta = () => {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top 0",
-                end: "bottom 80%",
-                scrub:2,
+                end: "bottom 100%",
             }
         })
         
@@ -78,7 +77,7 @@ const Cta = () => {
                         <div className='w-fit flex items-end overflow-hidden'>
                             <h1 
                                 ref={addToRefs}
-                                className={`${foundersGrotesk.className} pt-[2vw] -mb-[.9vw] text-[13vw] text-black uppercase leading-[.75] font-[500] tracking`}
+                                className={`${foundersGrotesk.className} pt-[2vw] -mb-[.9vw] text-[20vw] xl:text-[10vw] text-black uppercase leading-[.75] font-[500] tracking`}
                             >
                                 {item}
                             </h1>

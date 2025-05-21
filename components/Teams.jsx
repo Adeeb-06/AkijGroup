@@ -30,6 +30,7 @@ const Teams = () => {
     { name: 'Bashir Uddin', role: 'Managing Director' },
     { name: 'Bashir Uddin', role: 'Managing Director' },
     { name: 'Bashir Uddin', role: 'Managing Director' },
+    { name: 'Bashir Uddin', role: 'Managing Director' },
   ];
 
   return (
@@ -37,7 +38,7 @@ const Teams = () => {
       <div className="team mt-20 flex justify-center items-center gap-20">
         <div className='container w-[80vw] flex-wrap flex gap-20 md:gap-[20vw] xl:gap-20 justify-center'>
           {teamMembers.map((itm, index) => (
-            <div ref={teamMemeberRef} key={index} className="team-member xl:w-[18vw] w-[90vw] bg relative h-[60vh]">
+            <div ref={teamMemeberRef} key={index} className="team-member xl:w-[18vw] w-[90vw] bg relative h-[55vh]">
               <div className="img relative w-full h-full">
                 <div className="absolute inset-0 bg-black/50 z-10" />
               </div>

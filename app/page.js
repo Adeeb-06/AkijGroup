@@ -10,10 +10,11 @@ import Brands from "@/components/Brands";
 import Employes from "@/components/Employes";
 import Founder from "@/components/Founder";
 import Teams from "@/components/Teams";
+import SplashScreen from "@/components/SplashScreen";
 
 export default function Home() {
   useEffect(() => {
-    const isDesktop = window.innerWidth >= 500; // Adjust the breakpoint if needed
+    const isDesktop = window.innerWidth >= 500;
 
     if (isDesktop) {
       const scroll = new LocomotiveScroll({
@@ -29,8 +30,9 @@ export default function Home() {
 
   return (
     <>
+      <SplashScreen />
       <div className="main">
-        <div className="content flex flex-col ga">
+        <div className="content flex flex-col">
           <div className="hero">
             <Hero />
           </div>
@@ -41,16 +43,14 @@ export default function Home() {
             <About />
           </div>
           <Founder />
-          <Teams/>
+          <Teams />
           <div className="fet">
             <Employes />
           </div>
           <div className="brands">
             <Brands />
           </div>
-          
         </div>
-        
       </div>
     </>
   );

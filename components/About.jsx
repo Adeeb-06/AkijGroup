@@ -56,7 +56,7 @@ const About = () => {
       <div className={`${grodita.className}   relative w-full mt-8 pt-3`}>
         <div ref={triggerRef} className='  '>
 
-          {text.split("").map((letter, index) => (<span className='reveal-text text-[#120b026a] tracking-tight md:leading-[4vw] leading-[8vw] text-[7vw] md:text-[3.6vw] font-semibold ' ref={setlettersRef} key={index}>{letter}</span>))}
+          {text.split("").map((letter, index) => (<span className='reveal-text text-[#120b026a] tracking-normal md:leading-[4vw] leading-[8vw] text-[7vw] md:text-[3.6vw] font-semibold ' ref={setlettersRef} key={index}>{letter}</span>))}
         </div>
       </div>
 

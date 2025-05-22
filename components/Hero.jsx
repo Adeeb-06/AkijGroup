@@ -11,6 +11,11 @@ const futuraBold = localFont({
   display: "swap",
 });
 
+const groditaBold = localFont({
+  src: '../app/fonts/Gordita-Bold.otf',
+  display: 'swap',
+});
+
 const Hero = () => {
   // Add state to control visibility until animations are ready
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,7 +35,7 @@ const Hero = () => {
     
     // Create and start the animation timeline
     const tl = gsap.timeline();
-    tl.to(headRef1.current, { y: 0, opacity: 1, duration: 0.9, delay: 0.6 })
+    tl.to(headRef1.current, { y: 0, opacity: 1, duration: 0.9, delay: 3.6 })
       .to(headRef2.current, { y: 0, opacity: 1, duration: 0.9, stagger: 0.2 }, "-=0.8")
       .to(imgRef.current, { opacity: 1, transition: easeInOut, duration: 0.5 })
 
@@ -46,15 +51,15 @@ const Hero = () => {
       {/* Only show content after initial GSAP setup */}
       <div className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <div className="up uppercase w-full flex relative items-center h-[45vh] bg--600">
-          <div className={`xl:text-[7vw] text-[15vw] md:text-[12.5vw] absolute ml-[2vw] tracking- font-medium 
-             mt-[26vw] md:mt-[20vw] xl:mt-[7vw] w-[96vw] leading-[14vw] md:leading-[11vw] xl:leading-[6.4vw] ${futuraBold.className}`}>
+          <div className={`xl:text-[6vw] text-[15vw] md:text-[12.5vw] absolute ml-[2vw] tracking- font-medium 
+             mt-[26vw] md:mt-[20vw] xl:mt-[10vw] w-[96vw] leading-[14vw] md:leading-[11vw] xl:leading-[5vw] ${futuraBold.className}`}>
             <h1 ref={headRef1}>
               Decades of Impact
             </h1>
             <h1 ref={headRef2}>Grounded in True Integrity</h1>
           </div>
         </div>
-        <div className="bott py8 w-full h-[55vh] flex justify-center items-center bg--600">
+        <div className="bott py8 w-full h-[53vh] flex justify-center items-center bg--600">
           <div ref={imgRef} className="img py- w-[96vw] h-full relative">
             <Image fill alt="ssdfj" className='object-cover rounded-3xl' src={'/building.jpg'} />
           </div>

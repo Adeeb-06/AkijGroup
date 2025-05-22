@@ -8,6 +8,10 @@ const grodita = localFont({
   src: '../app/fonts/Gordita-Regular.otf',
   display: 'swap',
 });
+const groditaBold = localFont({
+  src: '../app/fonts/Gordita-Bold.otf',
+  display: 'swap',
+});
 
 const Nav = () => {
   const navRef = useRef(null);
@@ -28,12 +32,12 @@ const Nav = () => {
 
       tl.fromTo(navRef.current,
         { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: 0.6 }
+        { opacity: 1, y: 0,  delay:3, duration: 0.6 }
       );
 
       tl.fromTo(logoRef.current,
         { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.7 },
+        { opacity: 1, scale: 1,  duration: 0.7 },
         "-=0.3"
       );
     }
@@ -45,7 +49,7 @@ const Nav = () => {
 
       tl.fromTo(menuRef.current,
         { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' }
+        { y: 0, opacity: 1, duration: 0.5,ease: 'power3.out' }
       );
 
       tl.fromTo(menuLinksRef.current,
@@ -102,18 +106,15 @@ const Nav = () => {
     <>
       <header
         ref={navRef}
-        className="w-full sm:pr-16 py-6 flex items-center justify-between absolute z-50 transition-all duration-500"
+        className="w-full sm:pr-16 py-6 flex items-center justify-between absolute z-50 transition-all duration-500 "
       >
-        <div
-          ref={logoRef}
-          className="relative w-[10vw] h-[10vh]"
-        >
-          <Image fill alt='Logo' className='object-contain' src={'/logo.png'} />
-        </div>
+  <div className={`${groditaBold.className} text-[#000] relative flex xl:h-[5vw] xl:w-[5vw] h-[15vw] w-[15vw]  xl:left-7 uppercase  lgo text-[4vw]`}>
+        <Image alt='fs' fill src={'/logo.png'}/>
+      </div>        
 
         <div
           onClick={() => setClicked(prev => !prev)}
-          className="menu z-[1000] relative h-20 p-5 w-20 bg-[#E0D8B0] rounded-full cursor-pointer"
+          className="menu z-[1000] right-5 relative h-16 w-16 md:h-20 p-5 md:w-20 bg-[#E0D8B0] rounded-full cursor-pointer"
         >
           <div className='relative w-full h-full'>
             <Image

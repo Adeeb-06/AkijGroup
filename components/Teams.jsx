@@ -1,6 +1,6 @@
 'use client'
 
-import React, { use, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Lexend } from 'next/font/google';
@@ -20,9 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Teams = () => {
   const sectionRef = useRef(null);
-  const teamMemeberRef = useRef(null)
-
- 
+  const teamMemberRefs = useRef([]);
 
   const teamMembers = [
     { name: 'Bashir Uddin', role: 'Managing Director' },
@@ -33,12 +31,32 @@ const Teams = () => {
     { name: 'Bashir Uddin', role: 'Managing Director' },
   ];
 
+  useEffect(() => {
+    teamMemberRefs.current.forEach((el, index) => {
+      gsap.from(el, {
+        y: 20,
+        opacity: 0,
+        duration: 1.2,
+        delay: index * 0.2, // optional stagger effect
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        }
+      });
+    });
+  }, []);
+
   return (
     <div ref={sectionRef} id='team' className='w-full bg-[#FCFFE7] p-6 md:p-14 flex flex-col mb-20 gap-10'>
       <div className="team mt-20 flex justify-center items-center gap-20">
-        <div className='container w-[80vw] flex-wrap flex gap-20 md:gap-[20vw] xl:gap-20 justify-center'>
+        <div className='container w-[80vw] flex-wrap flex gap-20 md:gap-[20vw] xl:gap-30 justify-center'>
           {teamMembers.map((itm, index) => (
-            <div ref={teamMemeberRef} key={index} className="team-member xl:w-[18vw] w-[90vw] bg relative h-[55vh]">
+            <div
+              key={index}
+              ref={(el) => teamMemberRefs.current[index] = el}
+              className="team-member xl:w-[18vw] w-[90vw] bg relative h-[55vh]"
+            >
               <div className="img relative w-full h-full">
                 <div className="absolute inset-0 bg-black/50 z-10" />
               </div>

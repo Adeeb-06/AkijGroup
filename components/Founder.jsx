@@ -7,6 +7,7 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Teams from './Teams';
+import { cubicBezier } from 'framer-motion';
 
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -22,6 +23,27 @@ const Founder = () => {
   const sectionRef = useRef(null);
   const imgRef = useRef(null);
 
+   useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger:{
+        trigger:sectionRef.current,
+        start:"top 20%",
+        end:"bottom 80%"
+      }
+    })
+
+    tl.from(imgRef.current,{
+      y:50,
+      opacity:0,
+      duration:1,
+      transition: cubicBezier
+    })
+  
+    return () => {
+      
+    }
+  }, [])
+
   return (
     <div
       ref={sectionRef}
@@ -30,8 +52,8 @@ const Founder = () => {
       data-scroll-speed="-.06"
       className='w-full xl:rounded-tl-3xl xl:rounded-tr-3xl bg-[#FCFFE7] p'
     >
-      <div className='w-full p-6 md:p-14 flex flex-col gap-10'>
-        <div ref={imgRef} className="akij w-full relative h-[75vh]">
+      <div ref={imgRef}  className='w-full p-6 md:p-14 flex flex-col gap-10'>
+        <div className="akij w-full relative h-[75vh]">
           <div className="img">
             <div className="absolute inset-0 rounded-3xl bg-black/60 z-10" />
             <Image alt='sl' fill className='absolute object-cover rounded-3xl' src={'/akijuddin.jpg'} />

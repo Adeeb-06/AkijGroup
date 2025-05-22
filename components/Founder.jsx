@@ -25,7 +25,6 @@ const Founder = () => {
   return (
     <div
       ref={sectionRef}
-      id='team'
       data-scroll
       data-scroll-section
       data-scroll-speed="-.06"

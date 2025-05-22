@@ -34,7 +34,7 @@ const Teams = () => {
   ];
 
   return (
-    <div ref={sectionRef} className='w-full bg-[#FCFFE7] p-6 md:p-14 flex flex-col mb-20 gap-10'>
+    <div ref={sectionRef} id='team' className='w-full bg-[#FCFFE7] p-6 md:p-14 flex flex-col mb-20 gap-10'>
       <div className="team mt-20 flex justify-center items-center gap-20">
         <div className='container w-[80vw] flex-wrap flex gap-20 md:gap-[20vw] xl:gap-20 justify-center'>
           {teamMembers.map((itm, index) => (

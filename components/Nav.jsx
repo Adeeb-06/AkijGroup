@@ -12,58 +12,65 @@ const grodita = localFont({
 const Nav = () => {
   const navRef = useRef(null);
   const logoRef = useRef(null);
-  const linksRef = useRef([]);
+  const menuRef = useRef(null);
+  const menuLinksRef = useRef([]);
+  menuLinksRef.current = [];
 
-  // Reset refs array for the nav links
-  const setLinksRef = (el, index) => {
-    linksRef.current[index] = el;
+  const [clicked, setClicked] = useState(false);
+
+  const setMenuLinkRef = (el, index) => {
+    menuLinksRef.current[index] = el;
   };
 
-  // Initialize GSAP animations on component mount
   useEffect(() => {
-    // Make sure we have the DOM elements before animating
-    if (navRef.current && logoRef.current && linksRef.current.every(item => item)) {
-      // Create a GSAP timeline for better control
+    if (navRef.current && logoRef.current) {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      
-      // Start with the navbar
-      tl.fromTo(navRef.current, 
-        { opacity: 0, y: -20 }, 
+
+      tl.fromTo(navRef.current,
+        { opacity: 0, y: -20 },
         { opacity: 1, y: 0, duration: 0.6 }
       );
-      
-      // Animate the logo
+
       tl.fromTo(logoRef.current,
         { opacity: 0, scale: 0.8 },
         { opacity: 1, scale: 1, duration: 0.7 },
-        "-=0.3" // Start a bit before the navbar animation finishes
-      );
-      
-      // Stagger animate the nav links
-      tl.fromTo(linksRef.current,
-        { y: 20, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          duration: 0.5, 
-          stagger: 0.1 // 0.1 second delay between each link animation
-        },
-        "-=0.4" // Start a bit before the logo animation finishes
+        "-=0.3"
       );
     }
   }, []);
 
-  // Function to handle smooth scrolling when nav items are clicked
+  useEffect(() => {
+    if (clicked && menuRef.current) {
+      const tl = gsap.timeline();
+
+      tl.fromTo(menuRef.current,
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' }
+      );
+
+      tl.fromTo(menuLinksRef.current,
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.4,
+          ease: 'power3.out',
+        },
+        "-=0.2"
+      );
+    }
+  }, [clicked]);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const targetPosition = section.offsetTop - 100; // Offset to account for navbar height
+      const targetPosition = section.offsetTop - 100;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
-      const duration = 800; // Duration of scroll animation in milliseconds
+      const duration = 800;
       let start = null;
 
-      // Easing function for smoother animation (easeInOutQuad)
       const easeInOutQuad = (t, b, c, d) => {
         t /= d / 2;
         if (t < 1) return c / 2 * t * t + b;
@@ -71,7 +78,6 @@ const Nav = () => {
         return -c / 2 * (t * (t - 2) - 1) + b;
       };
 
-      // Animation function
       const animation = (currentTime) => {
         if (start === null) start = currentTime;
         const timeElapsed = currentTime - start;
@@ -80,47 +86,10 @@ const Nav = () => {
         if (timeElapsed < duration) requestAnimationFrame(animation);
       };
 
-      // Start animation
       requestAnimationFrame(animation);
     }
   };
 
-  // Handle hover animations for nav items
-  const handleMouseEnter = (index) => {
-    gsap.to(linksRef.current[index], {
-      scale: 1.05,
-      color: "#B85C38",
-      duration: 0.2
-    });
-    
-    // Find the underline element (the div that's the second child)
-    const underline = linksRef.current[index].querySelector('div');
-    if (underline) {
-      gsap.to(underline, {
-        width: "100%",
-        duration: 0.2
-      });
-    }
-  };
-
-  const handleMouseLeave = (index) => {
-    gsap.to(linksRef.current[index], {
-      scale: 1,
-      color: "#1a120b",
-      duration: 0.2
-    });
-    
-    // Find the underline element
-    const underline = linksRef.current[index].querySelector('div');
-    if (underline) {
-      gsap.to(underline, {
-        width: 0,
-        duration: 0.2
-      });
-    }
-  };
-
-  // Navigation items with their corresponding section IDs
   const navItems = [
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
@@ -130,41 +99,67 @@ const Nav = () => {
   ];
 
   return (
-    <header
-      ref={navRef}
-      className={`w-full pr-16 py-6 flex items-center justify-between fixed top-0 left-0 z-50 transition-all duration-500`}
-    >
-      {/* Logo */}
-      <div
-        ref={logoRef}
-        className="relative w-[10vw] h-[10vh]"
+    <>
+      <header
+        ref={navRef}
+        className="w-full sm:pr-16 py-6 flex items-center justify-between absolute z-50 transition-all duration-500"
       >
-        <Image fill alt='Logo' className='object-contain' src={'/logo.png'} />
-      </div>
+        <div
+          ref={logoRef}
+          className="relative w-[10vw] h-[10vh]"
+        >
+          <Image fill alt='Logo' className='object-contain' src={'/logo.png'} />
+        </div>
 
-      {/* Nav Links */}
-      <nav>
-        <ul className={`flex items-center justify-between w-full space-x-12 text-lg font-medium text-[#1a120b] font-mono ${grodita.className}`}>
-          {navItems.map((item, index) => (
-            <li
+        <div
+          onClick={() => setClicked(prev => !prev)}
+          className="menu z-[1000] relative h-20 p-5 w-20 bg-[#E0D8B0] rounded-full cursor-pointer"
+        >
+          <div className='relative w-full h-full'>
+            <Image
+              alt={clicked ? 'Close Menu' : 'Open Menu'}
+              fill
+              className='object-contain'
+              src={clicked ? '/close.svg' : '/menu.svg'}
+            />
+          </div>
+        </div>
+      </header>
+
+      {clicked && (
+        <div
+          ref={menuRef}
+          className="absolute z-[99] top-0 left-0 w-full h-[60vh] md:h-[30vh] bg-[#E0D8B0] flex flex-col sm:flex-row items-center justify-center gap-[5vw]"
+        >
+          <div
+            onClick={() => setClicked(false)}
+            className="absolute top-4 right-4 h-12 w-12 p-2 bg-[#C0B080] rounded-full cursor-pointer"
+          >
+            <Image
+              alt="Close Menu"
+              fill
+              className="object-contain"
+              src="/close.svg"
+            />
+          </div>
+
+          {navItems.map((itm, index) => (
+            <div
               key={index}
-              ref={(el) => setLinksRef(el, index)}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-              onClick={() => scrollToSection(item.id)}
-              className="cursor-pointer relative"
+              ref={(el) => setMenuLinkRef(el, index)}
+              onClick={() => {
+                scrollToSection(itm.id);
+                setClicked(false);
+              }}
+              className={`cursor-pointer ${grodita.className} text-[5vw] md:text-[2.5vw] uppercase`}
             >
-              {item.name}
-              <div
-                className="absolute -bottom-1 left-0 h-0.5 bg-[#B85C38]"
-                style={{ width: 0 }} // Initial state controlled by GSAP
-              />
-            </li>
+              {itm.name}
+            </div>
           ))}
-        </ul>
-      </nav>
-    </header>
+        </div>
+      )}
+    </>
   )
 }
 
-export default Nav
+export default Nav;

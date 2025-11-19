@@ -16,6 +16,8 @@ Designed to showcase the company’s brands, products, and services with a smoot
 
 ## 🛠️ Tech Stack
 
+| **Category** | **Technologies** |
+|-------------|------------------|
 | **Frontend** | [![My Skills](https://skillicons.dev/icons?i=js,html,css,nextjs,tailwind,react)](https://skillicons.dev) |
 | **Animation** | GSAP |
 | **Deployment & Version Controll** | [![My Skills](https://skillicons.dev/icons?i=git,github,vercel)](https://skillicons.dev) |

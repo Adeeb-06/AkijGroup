@@ -16,10 +16,10 @@ Designed to showcase the company’s brands, products, and services with a smoot
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Next.js, React.js, CSS3, HTML5  
+- **Frontend:**  [![My Skills](https://skillicons.dev/icons?i=js,html,css,nextjs,tailwind,react)](https://skillicons.dev)  
 - **Animations:** GSAP (GreenSock Animation Platform)  
-- **Deployment:** Vercel / Netlify (optional)  
-- **Version Control:** Git & GitHub  
+- **Deployment:**  [![My Skills](https://skillicons.dev/icons?i=vercel,)](https://skillicons.dev) 
+- **Version Control:**  [![My Skills](https://skillicons.dev/icons?i=github)](https://skillicons.dev) 
 
 ---
 
